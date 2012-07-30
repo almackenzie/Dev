@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Windows;
+using Microsoft.Practices.Prism.MefExtensions;
 
 namespace BeatportPowerCart.Shell
 {
@@ -12,5 +13,13 @@ namespace BeatportPowerCart.Shell
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            BeatportPowerCartBootstrapper bootStrapper = new BeatportPowerCartBootstrapper();
+            bootStrapper.Run();
+        }
     }
+
+    
+
 }
