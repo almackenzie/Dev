@@ -71,6 +71,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GameModule.cs" />
+    <Compile Include="Models\GroupDefinition.cs" />
+    <Compile Include="Models\WordDefinition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
