@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>PrismWithUnityExtensions</id>
+    <version>4.0.0.0</version>
+    <title>PrismWithUnityExtensions</title>
+    <authors>jon.stelly</authors>
+    <owners>jon.stelly</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Prism libraries including Unity Extensions built against Unity 2.1</description>
+    <summary>Prism libraries including Unity Extensions built against Unity 2.1</summary>
+    <tags>Prism MVVM Unity</tags>
+    <dependencies>
+      <dependency id="Unity" version="2.1.505.0" />
+    </dependencies>
+  </metadata>
+</package>

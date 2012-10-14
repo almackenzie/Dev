@@ -14,5 +14,12 @@ namespace BeatportPowerCart.Shell
             shell.Show();
             return shell;
         }
+
+
+        protected override void ConfigureModuleCatalog()
+        {
+            base.ConfigureModuleCatalog();
+        }
+
     }
 }
