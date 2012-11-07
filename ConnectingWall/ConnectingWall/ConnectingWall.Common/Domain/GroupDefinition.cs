@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConnectingWall.Module.UI.Game.Models
+﻿namespace ConnectingWall.Common.Domain
 {
     public class GroupDefinition
     {
@@ -15,6 +9,10 @@ namespace ConnectingWall.Module.UI.Game.Models
         {
             _description = description;
             _words = words;
+            foreach (WordDefinition wordDefinition in words)
+            {
+                wordDefinition.Group = this;
+            }
         }
 
         public string Description

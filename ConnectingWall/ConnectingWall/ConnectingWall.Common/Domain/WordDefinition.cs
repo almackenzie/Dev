@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConnectingWall.Module.UI.Game.Models
+﻿namespace ConnectingWall.Common.Domain
 {
     public class WordDefinition
     {
@@ -22,6 +16,8 @@ namespace ConnectingWall.Module.UI.Game.Models
                 return _word;
             }
         }
+
+        public GroupDefinition Group { get; set; }
 
     }
 }

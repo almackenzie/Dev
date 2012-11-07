@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:Models="clr-namespace:ConnectingWall.Module.UI.Game.Models"
-             mc:Ignorable="d" 
+             xmlns:Domain="clr-namespace:ConnectingWall.Common.Domain;assembly=ConnectingWall.Common"
+             xmlns:ViewModels="clr-namespace:ConnectingWall.Module.UI.Game.ViewModels" mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
         <Style TargetType="TextBlock" x:Key="WordSelectionStyle" >
@@ -12,23 +13,74 @@
             
         </Style>
 
+
+        
         <Style TargetType="ToggleButton" x:Key="ToggleButtonStyle">
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Button.IsDefaulted" Value="True">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <!--<Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="#FFBEE6FD"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FF3C7FB1"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="#FFC4E5F6"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FF2C628B"/>
+                            </Trigger>-->
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" TargetName="border" Value="#FFF4F4F4"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FFADB2B5"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#FF838383"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Setter Property="Background" Value="White" />
             <Style.Triggers>
                 <Trigger Property="IsChecked" Value="True">
-                    <Setter Property="Background" Value="Pink" />
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetProperty="Background.Color">
+                                <ColorAnimation To="Pink" Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
                 </Trigger>
+                <Trigger Property="IsChecked" Value="False">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetProperty="Background.Color">
+                                <ColorAnimation From="Red" Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                </Trigger>
+                <DataTrigger Binding="{Binding IsMatched}" Value="True">
+                    <Setter Property="Background" Value="#FFB5EAB5" />
+                </DataTrigger>
             </Style.Triggers>
         </Style>
 
-        <DataTemplate DataType="{x:Type Models:WordDefinition}">
-            <ToggleButton Style="{StaticResource ToggleButtonStyle}" >
+        <DataTemplate DataType="{x:Type ViewModels:WordViewModel}">
+            <ToggleButton Style="{StaticResource ToggleButtonStyle}" IsChecked="{Binding IsSelected}" >
                 <TextBlock Style="{StaticResource WordSelectionStyle}" Text="{Binding Word}" />
             </ToggleButton>
         </DataTemplate>
-
+        
+        
+        
     </UserControl.Resources>
     <Grid>
-        
         <UniformGrid Rows="4" Columns="4">
             <ContentControl Grid.Row="0" Grid.Column="0" Content="{Binding Words[0]}" />
             <ContentControl Grid.Row="0" Grid.Column="1" Content="{Binding Words[1]}" />
@@ -47,5 +99,6 @@
             <ContentControl Grid.Row="3" Grid.Column="2" Content="{Binding Words[14]}" />
             <ContentControl Grid.Row="3" Grid.Column="3" Content="{Binding Words[15]}" />
         </UniformGrid>
+        
     </Grid>
 </UserControl>
