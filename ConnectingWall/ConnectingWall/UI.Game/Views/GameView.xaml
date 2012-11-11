@@ -10,7 +10,7 @@
         <Style TargetType="TextBlock" x:Key="WordSelectionStyle" >
             <Setter Property="HorizontalAlignment" Value="Center" />
             <Setter Property="VerticalAlignment" Value="Center" />
-            
+            <Setter Property="FontFamily" Value= "Segoe UI" />
         </Style>
 
 

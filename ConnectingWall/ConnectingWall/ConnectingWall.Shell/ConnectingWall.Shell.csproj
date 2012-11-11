@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MahApps.Metro">
+      <HintPath>..\packages\MahApps.Metro.0.10.0.0\lib\net40\MahApps.Metro.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Expression.Interactions">
       <HintPath>..\packages\Prism.4.1.0.0\lib\NET40\Microsoft.Expression.Interactions.dll</HintPath>
     </Reference>
@@ -75,8 +78,9 @@
     <Reference Include="System.Reactive.Windows.Threading">
       <HintPath>..\packages\Rx-Xaml.2.0.20823\lib\Net45\System.Reactive.Windows.Threading.dll</HintPath>
     </Reference>
-    <Reference Include="System.Windows.Interactivity">
-      <HintPath>..\packages\Prism.4.1.0.0\lib\NET40\System.Windows.Interactivity.dll</HintPath>
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MahApps.Metro.0.10.0.0\lib\net40\System.Windows.Interactivity.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
