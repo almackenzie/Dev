@@ -76,14 +76,25 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Codility\Arrays\ArrayShift.cs" />
+    <Compile Include="Codility\Arrays\OddOccurences.cs" />
+    <Compile Include="Codility\Counting\FrogRiver1.cs" />
+    <Compile Include="Codility\Counting\MissingInteger.cs" />
+    <Compile Include="Codility\Counting\PermCheck.cs" />
     <Compile Include="Codility\Iterations\BinaryGap.cs" />
+    <Compile Include="Codility\PrefixSums\MinAvgTwoSlice.cs" />
+    <Compile Include="Codility\PrefixSums\PassingCars.cs" />
     <Compile Include="Codility\Tests\CodilityTests.cs" />
+    <Compile Include="Codility\TimeComplexity\MissingElement.cs" />
+    <Compile Include="Codility\TimeComplexity\TapeEquilibrium.cs" />
     <Compile Include="Codility\WellFormedStrings.cs" />
     <Compile Include="DynamicProgramming\AppleCounter.cs" />
     <Compile Include="DynamicProgramming\CoinSums.cs" />
     <Compile Include="DynamicProgramming\NonDecreasingSequence.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="LinkedLists\DoubleLinkedNode.cs" />
+    <Compile Include="LinkedLists\LinkedList.cs" />
+    <Compile Include="LinkedLists\LinkedListTests.cs" />
     <Compile Include="MaximumSumPath\PyramidDefinition.cs" />
     <Compile Include="MaximumSumPath\PyramidMaxSumPath.cs" />
     <Compile Include="Primes\HalfSizeSieve.cs" />
