@@ -82,6 +82,7 @@
     <Compile Include="Codility\Counting\MissingInteger.cs" />
     <Compile Include="Codility\Counting\PermCheck.cs" />
     <Compile Include="Codility\Iterations\BinaryGap.cs" />
+    <Compile Include="Codility\PrefixSums\GenomicRangeQuery.cs" />
     <Compile Include="Codility\PrefixSums\MinAvgTwoSlice.cs" />
     <Compile Include="Codility\PrefixSums\PassingCars.cs" />
     <Compile Include="Codility\Tests\CodilityTests.cs" />
