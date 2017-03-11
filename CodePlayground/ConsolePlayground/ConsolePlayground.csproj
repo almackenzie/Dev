@@ -85,6 +85,7 @@
     <Compile Include="Codility\PrefixSums\GenomicRangeQuery.cs" />
     <Compile Include="Codility\PrefixSums\MinAvgTwoSlice.cs" />
     <Compile Include="Codility\PrefixSums\PassingCars.cs" />
+    <Compile Include="Codility\Sorting\DiscIntersections.cs" />
     <Compile Include="Codility\Tests\CodilityTests.cs" />
     <Compile Include="Codility\TimeComplexity\MissingElement.cs" />
     <Compile Include="Codility\TimeComplexity\TapeEquilibrium.cs" />
