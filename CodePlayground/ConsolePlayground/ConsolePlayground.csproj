@@ -82,10 +82,15 @@
     <Compile Include="Codility\Counting\MissingInteger.cs" />
     <Compile Include="Codility\Counting\PermCheck.cs" />
     <Compile Include="Codility\Iterations\BinaryGap.cs" />
+    <Compile Include="Codility\Leader\Dominator.cs" />
+    <Compile Include="Codility\Leader\EquiLeader.cs" />
     <Compile Include="Codility\PrefixSums\GenomicRangeQuery.cs" />
     <Compile Include="Codility\PrefixSums\MinAvgTwoSlice.cs" />
     <Compile Include="Codility\PrefixSums\PassingCars.cs" />
     <Compile Include="Codility\Sorting\DiscIntersections.cs" />
+    <Compile Include="Codility\StacksAndQueues\Brackets.cs" />
+    <Compile Include="Codility\StacksAndQueues\Fish.cs" />
+    <Compile Include="Codility\StacksAndQueues\SkyLine.cs" />
     <Compile Include="Codility\Tests\CodilityTests.cs" />
     <Compile Include="Codility\TimeComplexity\MissingElement.cs" />
     <Compile Include="Codility\TimeComplexity\TapeEquilibrium.cs" />
