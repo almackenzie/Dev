@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TestApp"
+             xmlns:localControls="clr-namespace:TestApp.Controls"
+             x:Class="TestApp.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="myStyle" TargetType="Label">
+                <Setter Property="LineBreakMode" Value="NoWrap" />
+                <Setter Property="Rotation" Value="270" />
+                <Setter Property="TranslationX" Value="20" />
+                <Setter Property="TranslationY" Value="-20" />
+                <Setter Property="Grid.ColumnSpan" Value="2" />
+            </Style>
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+    
+    <Grid Margin="0,20,0,0" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid BackgroundColor="DarkCyan" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="7" />
+        <Grid BackgroundColor="DarkCyan" Grid.Row="1" Grid.Column="0" Grid.RowSpan="5" />
+        <!--<Grid BackgroundColor="DarkCyan" Grid.Row="2" Grid.ColumnSpan="8" />
+        <Grid BackgroundColor="DarkCyan" Grid.Row="3" Grid.ColumnSpan="8" />
+        <Grid BackgroundColor="DarkCyan" Grid.Row="4" Grid.ColumnSpan="8" />
+        <Grid BackgroundColor="DarkCyan" Grid.Row="5" Grid.ColumnSpan="8" />-->
+
+        <!-- Row headers -->    
+        <Label Style="{StaticResource myStyle}" Grid.Column="0" Grid.Row="1" Text="Breakfast" />
+        <Label Style="{StaticResource myStyle}" Grid.Column="0" Grid.Row="2" Text="Snack 1" />
+        <Label Style="{StaticResource myStyle}" Grid.Column="0" Grid.Row="3" Text="Lunch" />
+        <Label Style="{StaticResource myStyle}" Grid.Column="0" Grid.Row="4" Text="Snack 2" />
+        <Label Style="{StaticResource myStyle}" Grid.Column="0" Grid.Row="5" Text="Dinner" />
+
+        <!-- Column headers -->
+
+        <localControls:ColumnHeaderView Weekday="Monday"  Grid.Row="0" Grid.Column ="1" />
+        <localControls:ColumnHeaderView Weekday="Tuesday"  Grid.Row="0" Grid.Column ="2" />
+        <localControls:ColumnHeaderView Weekday="Wednesday"  Grid.Row="0" Grid.Column ="3" />
+        <localControls:ColumnHeaderView Weekday="Thursday"  Grid.Row="0" Grid.Column ="4" />
+        <localControls:ColumnHeaderView Weekday="Friday"  Grid.Row="0" Grid.Column ="5" />
+        <localControls:ColumnHeaderView Weekday="Saturday"  Grid.Row="0" Grid.Column ="6" />
+        <localControls:ColumnHeaderView Weekday="Sunday"  Grid.Row="0" Grid.Column ="7" />
+
+        <!--<Button Grid.Row="1" Grid.Column="0" Text="Left" />
+        <Button Grid.Row="1" Grid.Column="1" Text="middle" Clicked="Button_Clicked"  />
+        <Button Grid.Row="1" Grid.Column="2" Text="Right" />-->
+
+        <!-- Monday -->
+        <localControls:MealSlotView Grid.Row="1" Grid.Column ="1" />
+        <localControls:MealSlotView Grid.Row="2" Grid.Column ="1" />
+        <localControls:MealSlotView Grid.Row="3" Grid.Column ="1" />
+        <localControls:MealSlotView Grid.Row="4" Grid.Column ="1" />
+        <localControls:MealSlotView Grid.Row="5" Grid.Column ="1" />
+
+
+        <!-- Tuesday -->
+        <localControls:MealSlotView Grid.Row="1" Grid.Column ="2" />
+        <localControls:MealSlotView Grid.Row="2" Grid.Column ="2" />
+        <localControls:MealSlotView Grid.Row="3" Grid.Column ="2" />
+        <localControls:MealSlotView Grid.Row="4" Grid.Column ="2" />
+        <localControls:MealSlotView Grid.Row="5" Grid.Column ="2" />
+
+        <!-- Wednesday -->
+        <localControls:MealSlotView Grid.Row="1" Grid.Column ="3" />
+        <localControls:MealSlotView Grid.Row="2" Grid.Column ="3" />
+        <localControls:MealSlotView Grid.Row="3" Grid.Column ="3" />
+        <localControls:MealSlotView Grid.Row="4" Grid.Column ="3" />
+        <localControls:MealSlotView Grid.Row="5" Grid.Column ="3" />
+
+        <!-- Thursday -->
+        <localControls:MealSlotView Grid.Row="1" Grid.Column ="4" />
+        <localControls:MealSlotView Grid.Row="2" Grid.Column ="4" />
+        <localControls:MealSlotView Grid.Row="3" Grid.Column ="4" />
+        <localControls:MealSlotView Grid.Row="4" Grid.Column ="4" />
+        <localControls:MealSlotView Grid.Row="5" Grid.Column ="4" />
+
+        <!-- Friday -->
+        <localControls:MealSlotView Grid.Row="1" Grid.Column ="5" />
+        <localControls:MealSlotView Grid.Row="2" Grid.Column ="5" />
+        <localControls:MealSlotView Grid.Row="3" Grid.Column ="5" />
+        <localControls:MealSlotView Grid.Row="4" Grid.Column ="5" />
+        <localControls:MealSlotView Grid.Row="5" Grid.Column ="5" />
+
+        <!-- Saturday -->
+        <localControls:MealSlotView Grid.Row="1" Grid.Column ="6" />
+        <localControls:MealSlotView Grid.Row="2" Grid.Column ="6" />
+        <localControls:MealSlotView Grid.Row="3" Grid.Column ="6" />
+        <localControls:MealSlotView Grid.Row="4" Grid.Column ="6" />
+        <localControls:MealSlotView Grid.Row="5" Grid.Column ="6" />
+
+        <!-- Sunday -->
+        <localControls:MealSlotView Grid.Row="1" Grid.Column ="7" />
+        <localControls:MealSlotView Grid.Row="2" Grid.Column ="7" />
+        <localControls:MealSlotView Grid.Row="3" Grid.Column ="7" />
+        <localControls:MealSlotView Grid.Row="4" Grid.Column ="7" />
+        <localControls:MealSlotView Grid.Row="5" Grid.Column ="7" />
+
+
+    </Grid>
+
+</ContentPage>

@@ -87,6 +87,7 @@
     <Compile Include="Codility\PrefixSums\GenomicRangeQuery.cs" />
     <Compile Include="Codility\PrefixSums\MinAvgTwoSlice.cs" />
     <Compile Include="Codility\PrefixSums\PassingCars.cs" />
+    <Compile Include="Codility\Slices\MaximumSlices.cs" />
     <Compile Include="Codility\Sorting\DiscIntersections.cs" />
     <Compile Include="Codility\StacksAndQueues\Brackets.cs" />
     <Compile Include="Codility\StacksAndQueues\Fish.cs" />
